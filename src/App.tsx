@@ -214,46 +214,58 @@ export default function App() {
           </div>
         </section>
 
-         <section id="come-lavoro" className="bg-[#F0EBE1] py-24 md:py-32 border-y border-[rgba(0,0,0,0.05)]">
-          <div className="container">
-            <div className="fade-in mb-20 md:text-center md:flex md:flex-col md:items-center">
-              <p className="uppercase tracking-widest gold-text text-[0.7rem] font-semibold mb-6">COME LAVORO</p>
-              <h2 className="text-h2 mb-6 text-[#1A1A1A] font-normal">Semplice. Senza sorprese.</h2>
-              <p className="text-[#6B6B6B] max-w-[650px] leading-relaxed">
+         <section id="come-lavoro" className="bg-[#F0EBE1] py-32 md:py-48 border-y border-[rgba(0,0,0,0.05)]">
+          <div className="container px-6">
+            <div className="fade-in mb-24 md:text-center md:flex md:flex-col md:items-center">
+              <p className="uppercase tracking-[0.2em] gold-text text-[0.75rem] font-semibold mb-8">IL MIO PROCESSO</p>
+              <h2 className="text-h2 mb-8 text-[#1A1A1A] font-normal tracking-tight">Semplice. Senza sorprese.</h2>
+              <p className="text-[#6B6B6B] max-w-[700px] leading-relaxed text-[1.125rem]">
                 So che affidarsi a qualcuno per il tuo sito può sembrare un rischio. 
-                Per questo ho un processo chiaro, in 3 passi.
+                Per questo ho un processo trasparente, progettato per darti controllo e tranquillità.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
-              <div className="fade-in relative border-l border-gold-border pl-10 md:border-l-0 md:pl-0">
-                <span className="serif text-[2.5rem] gold-text opacity-30 block mb-6">①</span>
-                <h3 className="text-[1.25rem] mb-6 font-normal serif text-[#1A1A1A]">"Mi scrivi"</h3>
-                <p className="text-[#6B6B6B] text-[0.9rem] leading-[1.7]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-x-20 lg:gap-x-28">
+              <div className="fade-in group">
+                <div className="mb-8 flex items-end gap-4">
+                  <span className="serif text-[4rem] leading-none gold-text opacity-20 group-hover:opacity-40 transition-opacity">01</span>
+                  <div className="h-[0.5px] flex-1 bg-gold-border opacity-30 mb-2"></div>
+                </div>
+                <h3 className="text-[1.5rem] mb-6 font-normal serif text-[#1A1A1A]">"Mi scrivi"</h3>
+                <p className="text-[#6B6B6B] text-[1rem] leading-[1.8]">
                    Raccontami del tuo progetto — nessun impegno, nessun preventivo a freddo. 
-                  Capisco prima, propongo dopo.
+                   Ci prendiamo il tempo per capire se siamo il "match" giusto per lavorare insieme.
                 </p>
               </div>
-              <div className="fade-in relative border-l border-gold-border pl-10 md:border-l-0 md:pl-0 md:border-l md:gold-border md:pl-10">
-                <span className="serif text-[2.5rem] gold-text opacity-30 block mb-6">②</span>
-                <h3 className="text-[1.25rem] mb-6 font-normal serif text-[#1A1A1A]">"Progettiamo insieme"</h3>
-                <p className="text-[#6B6B6B] text-[0.9rem] leading-[1.7]">
-                  Definiamo contenuti, stile e obiettivi. Tu sei sempre coinvolto — 
-                  non sparisco per settimane a fare cose che non ti aspetti.
+
+              <div className="fade-in group">
+                <div className="mb-8 flex items-end gap-4">
+                  <span className="serif text-[4rem] leading-none gold-text opacity-20 group-hover:opacity-40 transition-opacity">02</span>
+                  <div className="h-[0.5px] flex-1 bg-gold-border opacity-30 mb-2"></div>
+                </div>
+                <h3 className="text-[1.5rem] mb-6 font-normal serif text-[#1A1A1A]">"Progettiamo insieme"</h3>
+                <p className="text-[#6B6B6B] text-[1rem] leading-[1.8]">
+                  Definiamo contenuti, stile e obiettivi. Tu sei sempre coinvolto nel processo — 
+                  niente scatole chiuse o "colpi di scena" finali. Ogni scelta è condivisa.
                 </p>
               </div>
-              <div className="fade-in relative border-l border-gold-border pl-10 md:border-l-0 md:pl-0 md:border-l md:gold-border md:pl-10">
-                <span className="serif text-[2.5rem] gold-text opacity-30 block mb-6">③</span>
-                <h3 className="text-[1.25rem] mb-6 font-normal serif text-[#1A1A1A]">"Il tuo sito è live"</h3>
-                <p className="text-[#6B6B6B] text-[0.9rem] leading-[1.7]">
-                  Consegna in 2–3 settimane. Ti accompagno anche dopo, se hai bisogno.
+
+              <div className="fade-in group">
+                <div className="mb-8 flex items-end gap-4">
+                  <span className="serif text-[4rem] leading-none gold-text opacity-20 group-hover:opacity-40 transition-opacity">03</span>
+                  <div className="h-[0.5px] flex-1 bg-gold-border opacity-30 mb-2"></div>
+                </div>
+                <h3 className="text-[1.5rem] mb-6 font-normal serif text-[#1A1A1A]">"Il tuo sito è live"</h3>
+                <p className="text-[#6B6B6B] text-[1rem] leading-[1.8]">
+                  Consegna in 2–3 settimane. Il lancio è solo l'inizio: ti accompagno nei primi 
+                  passi e resto il tuo punto di riferimento per ogni evoluzione futura.
                 </p>
               </div>
             </div>
 
-            <div className="fade-in mt-20 text-center">
-              <a href="#contatti" className="inline-flex items-center justify-center gold-bg text-white px-10 py-3.5 rounded-[2px] text-[0.9rem] tracking-[0.05em] hover:opacity-90 transition-opacity">
-                Iniziamo →
+            <div className="fade-in mt-32 text-center">
+              <a href="#contatti" className="inline-flex items-center justify-center gold-bg text-white px-12 py-4 rounded-[2px] text-[1rem] tracking-[0.1em] hover:opacity-90 transition-all font-medium uppercase shadow-lg shadow-gold-border/20">
+                Inizia ora il tuo progetto →
               </a>
             </div>
           </div>
