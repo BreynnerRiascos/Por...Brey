@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Colores - Clean Minimalism Theme */
+  --color-bg: #FAFAF8;           /* crema principal */
+  --color-surface: #F0EBE1;      /* arena cálida — secciones alternas */
+  --color-dark: #1A1A1A;         /* footer, texto fuerte */
+  --color-primary: #C9A84C;      /* dorado champagne — acción */
+  --color-primary-light: rgba(201,168,76,0.08); /* fondos sutiles */
+  --color-text: #1A1A1A;         /* texto principal */
+  --color-text-muted: #6B6B6B;   /* texto secundario */
+  --color-border: rgba(26,26,26,0.08); /* bordes */
+  --color-border-gold: rgba(201, 168, 76, 0.3); /* bordes dorados */
+
+  /* Tipografía - Clean Minimalism Theme */
+  --font-display: 'Georgia', serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Escala tipográfica */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-h3: clamp(1.125rem, 2vw, 1.5rem);
+  --text-h2: clamp(1.5625rem, 3.5vw, 2.75rem);
+  --text-h1: clamp(2.5rem, 6vw, 4rem);
+
+  /* Espaciado */
+  --space-2: 0.5rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+
+  /* Geometría */
+  --radius: 2px;
+  --radius-pill: 50px;
+  --border-thin: 0.5px;
+}
+
+/* Theme Classes */
+.gold-border { border: var(--border-thin) solid var(--color-border-gold); }
+.gold-bg { background-color: var(--color-primary); }
+.gold-text { color: var(--color-primary); }
+.pill { 
+  background: var(--color-primary-light); 
+  border: var(--border-thin) solid var(--color-border-gold); 
+}
+.card-shadow:hover { 
+  border-color: rgba(201, 168, 76, 0.4); 
+  transform: translateY(-2px); 
+  transition: all 0.2s ease; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .serif {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utils */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+header.scrolled {
+  background: rgba(250, 250, 248, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: var(--border-thin) solid var(--color-border-gold);
+  height: 70px;
+}
+
+/* Toast */
+#mwa-toast {
+  position: fixed; bottom: 24px; left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #1a1a1a; color: #fff;
+  padding: 12px 24px; border-radius: 50px;
+  font-size: 14px; font-family: system-ui, sans-serif;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 99999; white-space: nowrap;
+  border-left: 4px solid #C9A84C;
+}
+#mwa-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* Animation reduction */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  * { transition: none !important; animation: none !important; }
+}
+
